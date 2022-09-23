@@ -1,4 +1,4 @@
-import { print } from './js/lib.js';
+import { print } from "./js/lib.js";
 /* Refer to https://github.com/OleksiyRudenko/a-tiny-JS-world for the task details
    Complete the below for code reviewers' convenience:
 
@@ -9,6 +9,54 @@ import { print } from './js/lib.js';
 // ======== OBJECTS DEFINITIONS ========
 // Define your objects here
 
+const man = {
+  species: "human",
+  name: "Emmett",
+  gender: "male",
+  legs: 2,
+  hands: 2,
+  saying: "Great Scott!",
+};
+
+const woman = {
+  species: "human",
+  name: "Sarah",
+  gender: "female",
+  legs: 2,
+  hands: 2,
+  saying: "You're talking about things I haven't done yet in the past tense.",
+};
+
+const dog = {
+  species: "dog",
+  name: "Rex",
+  gender: "male",
+  legs: 4,
+  hands: 0,
+  saying: "woof-woof!",
+};
+
+const cat = {
+  species: "cat",
+  name: "Garfield",
+  gender: "male",
+  legs: 4,
+  hands: 0,
+  saying: "Feed me!",
+};
+
+const catWomen = {
+  species: "cat-human",
+  name: "Selina",
+  gender: "female",
+  legs: 2,
+  hands: 2,
+  saying: cat.saying,
+};
+
+const myInhabitantsNames = [man, woman, dog, cat, catWomen];
+
+const orderOfKeys = ["species", "name", "gender", "legs", "hands", "saying"];
 
 // ======== OUTPUT ========
 /* Use print(message) for output.
@@ -28,3 +76,9 @@ import { print } from './js/lib.js';
    print('human; <strong>John</strong>; male; 2; 2; <em>Hello world!</em>; Rex, Tom, Jenny');
    print('human; <strong>John</strong>; male; 2; 2; <em>Hello world!</em>; Rex, Tom, Jenny', 'div');
    */
+
+const allInhabitants = myInhabitantsNames.map((myInhabitantsNames) =>
+  orderOfKeys.map((key) => myInhabitantsNames[key])
+);
+
+allInhabitants.forEach((arrayOfValues) => print(arrayOfValues.join("; ")));
