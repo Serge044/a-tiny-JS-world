@@ -54,3 +54,5 @@ const allInhabitants = myInhabitantsNames.map((myInhabitantsNames) =>
 );
 
 allInhabitants.forEach((arrayOfValues) => print(arrayOfValues.join("; ")));
+
+123test
